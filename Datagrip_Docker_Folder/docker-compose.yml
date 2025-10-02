@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mlops-postgres:
+    image: postgres:13
+    container_name: mlops-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mlops_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mlops_password}
+      POSTGRES_DB: ${POSTGRES_DB:-mlops_healthcare}
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./postgres/init-scripts:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mlops_user -d mlops_healthcare"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: mlops-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@mlops.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - mlops-postgres
+    restart: unless-stopped

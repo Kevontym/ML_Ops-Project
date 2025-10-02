@@ -1,0 +1,15 @@
+artifact_uri: file:////Users/kekdiaz/Documents/GitHub/ML_Ops-Project/Datagrip_Docker_Folder/mlruns/590433705663160131/3c794b79254241a89dbd881bbce0e379/artifacts
+end_time: 1759364470670
+entry_point_name: ''
+experiment_id: '590433705663160131'
+lifecycle_stage: active
+run_id: 3c794b79254241a89dbd881bbce0e379
+run_name: drive_sync_20251001_202109
+run_uuid: 3c794b79254241a89dbd881bbce0e379
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759364469978
+status: 3
+tags: []
+user_id: kekdiaz

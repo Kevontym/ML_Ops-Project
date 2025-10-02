@@ -1,0 +1,22 @@
+{
+  "export_timestamp": "20251001_202110",
+  "total_records": 300,
+  "data_schema": {
+    "patient_id": "int64",
+    "age": "int64",
+    "gender": "object",
+    "blood_pressure": "object",
+    "cholesterol": "int64",
+    "glucose_level": "int64",
+    "medications": "object",
+    "doctor_notes": "object",
+    "lab_results": "object",
+    "previous_admissions": "int64",
+    "readmission_risk": "bool"
+  },
+  "statistics": {
+    "avg_age": 58.18666666666667,
+    "readmission_rate": 0.6633333333333333,
+    "record_count": 300
+  }
+}

@@ -1,0 +1,14 @@
+# Environment files
+.env
+*.env
+.env.local
+.env.production
+
+# Database
+postgres_data/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
